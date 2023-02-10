@@ -1,0 +1,9 @@
+policies:
+  - name: ec2-old-instances
+    resource: ec2
+    comment: |
+      Report running instance older than 30 days
+    filters:
+      - "State.Name": running
+      - type: instance-age
+        days: 30

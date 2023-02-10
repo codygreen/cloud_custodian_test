@@ -1,0 +1,7 @@
+policies:
+  - name: ec2-tag-compliance
+    resource: ec2
+    comment: | 
+      Find EC2 instances that do not have an Owner tag
+    filters:
+      - "tag:Owner": absent
